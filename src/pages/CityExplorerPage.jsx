@@ -324,6 +324,7 @@ const CityExplorerPage = () => {
             >
               Explore {cityData.name}
             </Button>
+            <div style={{ height: 20 }}></div>
             <Button 
               to="/contact" 
               variant="outline"
