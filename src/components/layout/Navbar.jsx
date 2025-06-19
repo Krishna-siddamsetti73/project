@@ -37,22 +37,25 @@ const Navbar = () => {
 
   return (
     <header 
-      className={`fixed w-full z-50 transition-all duration-300 ${
+      className={`fixed w-full h-20 z-50 transition-all duration-300 ${
         scrolled 
           ? 'bg-white shadow-md py-2' 
           : 'bg-transparent py-4'
       }`}
     >
-      <nav className="container mx-auto px-4 flex justify-around items-center">
+      <nav className="container mx-auto h-20 px-4 flex justify-between items-center">
         {/* Logo */}
         <Link to="/" className="flex items-center space-x-2">
           <motion.img
-            src="src\components\pics\make a move logo without tagline.png"
+            src={!scrolled 
+              ? 'src/components/pics/logowhitetext.png' 
+              : 'src/components/pics/blackietext.png'}
             alt="Make a Move Logo"
             initial={{ opacity: 0, x: -20}}
             animate={{ opacity: 1, x: 0}}
             transition={{ duration: 0.5}}
-            className="h-20 w-20 object-contain"
+            className={!scrolled?"h-20 w-25 object-contain":"h-10 w-23 object-contain"}
+            style={!scrolled?{ position: 'absolute', left: 20, top: 15, height:110 }:{ position: 'absolute', left: 5, top: 15,}}
           />
           {/* <motion.div
             initial={{ opacity: 0, x: -20 }}
@@ -90,7 +93,7 @@ const Navbar = () => {
               </Link>
             </li>
           ))}
-           <Link to="/" className="flex items-center space-x-2">
+           <Link to="/ProfilePage" className="flex items-center space-x-2">
           <div className="h-15 w-15 rounded-full bg-gray-200 shadow-lg flex items-center justify-center">
             {/* Placeholder content, e.g., initials or icon */}
              <motion.img

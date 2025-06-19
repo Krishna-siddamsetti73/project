@@ -18,6 +18,10 @@ import MedicalTourismPage from './pages/MedicalTourismPage';
 import CityExplorerPage from './pages/CityExplorerPage';
 import AboutPage from './pages/AboutPage';
 import ContactPage from './pages/ContactPage';
+import UserProfile from './pages/UserProfile'
+import ProfilePage from './components/profile/profilepage';
+import PasswordResetPage from './components/profile/PasswordResetPage';
+
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -53,6 +57,9 @@ function App() {
             <Route path="/medical-tourism" element={<MedicalTourismPage />} />
             <Route path="/about" element={<AboutPage />} />
             <Route path="/contact" element={<ContactPage />} />
+            <Route path="/ProfilePage" element={<ProfilePage />} />
+            <Route path="/reset-password" element={<PasswordResetPage />} />
+            {/* Add more routes as needed */}
           </Routes>
         </AnimatePresence>
       </main>

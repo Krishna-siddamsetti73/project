@@ -6,12 +6,12 @@ import { FiChevronRight } from 'react-icons/fi';
 
 const videoSlides = [
   {
-    src: 'src/components/pics/46.mp4',
+    src: 'src/components/pics/WhatsApp Video 2025-06-18 at 17.17.09_75c86f4b.mp4',
     heading: 'Travel in Comfort',
     subheading: 'Experience luxury travel tailored to your desires.',
   },
   {
-    src: 'src/components/pics/WhatsApp Video 2025-06-18 at 17.17.09_75c86f4b.mp4',
+    src: 'src/components/pics/46.mp4',
     heading: 'Discover New Places',
     subheading: 'Let us guide you to hidden gems across the globe.',
   },
@@ -49,12 +49,12 @@ const HeroSection = () => {
               muted
               className="w-full h-screen object-cover"
             />
-            {/* <div className="absolute inset-0 bg-black bg-opacity-5" /> */}
+            <div className="absolute inset-0 bg-black bg-opacity-5" />
           </div>
         ))}
       </Slider>
 
-      {/* Text Overlay
+      {/* Text Overlay */}
       <div className="absolute top-0 left-0 w-full h-full z-10 flex items-center justify-center">
         <div className="text-center px-6">
           <motion.h1
@@ -99,7 +99,7 @@ const HeroSection = () => {
             </Button>
           </motion.div>
         </div>
-      </div> */}
+      </div>
     </section>
   );
 };
